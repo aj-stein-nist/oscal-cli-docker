@@ -1,7 +1,7 @@
 ARG GIT_IMAGE=bitnami/git:2.35.2
 ARG MAVEN_IMAGE=maven:3.8.5-openjdk-17
 ARG RELEASE=0.3.2
-ARG GIT_REF=develop
+ARG GIT_REF=main
 
 ## Attempting to make this as compatible with Iron Bank as possible
 ## Matching current version on Iron Bank
