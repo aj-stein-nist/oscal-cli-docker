@@ -6,8 +6,6 @@ name: Docker
 # documentation.
 
 on:
-  schedule:
-    - cron: '23 23 * * *'
   push:
     branches: [ "main" ]
     # Publish semver tags as releases.
@@ -19,8 +17,8 @@ env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
-
+  IMAGE_NAME: ${{ github.repository_owner }}/oscal-cli
+  RELEASE: 0.3.2
 
 jobs:
   build:
