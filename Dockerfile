@@ -20,7 +20,7 @@ FROM ${MAVEN_IMAGE}
 ARG RELEASE
 COPY --from=builder /usr/src/oscal-cli/cli-core/target/cli-core-${RELEASE}-oscal-cli/lib/* /usr/local/lib/oscal-cli/
 COPY --from=builder /usr/src/oscal-cli/cli-core/target/cli-core-${RELEASE}-oscal-cli/bin/oscal-cli /usr/local/bin/oscal-cli
-ENV CLASSPATH="/usr/lib/oscal-cli/*"
+ENV CLASSPATH="/usr/local/lib/oscal-cli/*"
 
 VOLUME [ "/app" ]
 WORKDIR /app
